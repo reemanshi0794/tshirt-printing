@@ -1,6 +1,5 @@
 // openai.js
 require('dotenv').config();
-const fetch = require('node-fetch');
 const apiKey = process.env.OPENAI_API_KEY;
 
 async function callOpenAI(systemMessage, userMessage) {

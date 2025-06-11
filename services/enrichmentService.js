@@ -2,7 +2,9 @@ const { callOpenAI } = require("../openAi");
 
 
 
-const enrichConcept = async (topic) => {
+const enrichConcept = async (userInput) => {
+  const {topic, description}= userInput;
+  console.log("user input", userInput)
   const systemPrompt = `
 You are a creative T-shirt concept enhancer. A user provides a raw topic or idea (e.g., "Just Peace"). Your task is to:
 1. Evaluate if the topic is visually strong. If not, enrich or rephrase to be more T-shirt-friendly and expressive.
